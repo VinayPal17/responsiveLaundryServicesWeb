@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-[playfair display]">
+    <header class="sticky top-0 z-40 bg-gray-100">
+        <nav class="main-nav mx-w-[1200px] mx-auto flex justify-between items-center px-4 md:px-8  h-20 ">
+ 
+          
+          <!-- Logo -->
+          <div class="logo flex items-center gap-4">
+            <p class="text-3xl md:text-4xl font-bold ">LOGO</p>
+          </div>   
+ 
+          <!-- Desktop links -->
+          <div class="sections hidden md:flex">
+            <ul class="flex items-center gap-8 p-4 text-gray-600 text-lg font-medium ">
+            <li class="transform transition-transform duration-300 hover:translate-y-[-3px] "><a href="#home" class="pb-2 ">Home </a></li>
+            <li class="transform transition-transform duration-300 hover:translate-y-[-3px]"><a href="#about-us" class="pb-2 ">About</a></li>
+            <li class="transform transition-transform duration-300 hover:translate-y-[-3px]"><a href="#services" class="pb-2 ">Services</a></li>
+            <li class="transform transition-transform duration-300 hover:translate-y-[-3px]"><a href="#contact-us" class="pb-2 ">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- user icon & mobile menu button -->
+          <div class="flex items-center justify-center gap-3">
+
+            <button id="userBtn" class="username  text-base font-semibold  bg-blue-200 text-blue-500 p-3 border-none rounded-[14px] flex justify-center items-center gap-2 cursor-pointer hover:bg-blue-500 hover:text-blue-200 transition-colors duration-300">
+              <i class="fa-solid fa-user"></i>
+              <p class="hidden md:inline-block">Username</p>
+            </button>
+
+            <button id="menuToggle" aria-expanded="false" class="md:hidden text-2xl p-2 ">
+              <i id="menuIcon" class="fa-solid fa-bars"></i>
+            </button>
+
+          </div>
+           
+        </nav>
+
+        <!-- Mobile menu links -->
+          <div id="mobileMenu" class="md:hidden bg-gray-100 border-t hidden">
+            <div class="px-4 pb-4 pt-3 space-y-3">
+              <a href="#home" class="block text-lg font-medium text-gray-700 hover:text-blue-600 border-b border-spacing-0.5">Home</a>
+              <a href="#about-us" class="block text-lg font-medium text-gray-700 hover:text-blue-600 border-b border-spacing-0.5">About</a>
+              <a href="#services" class="block text-lg font-medium text-gray-700 hover:text-blue-600 border-b border-spacing-0.5">Services</a>
+              <a href="#contact-us" class="block text-lg font-medium text-gray-700 hover:text-blue-600 border-b border-spacing-0.5">Contact</a>
+            </div>
+          </div>
+    </header>
+
+    <section class="hero max-w-[1200px] mx-auto px-4 md:px-8 py-10" id="home">
+
+      <div class="hero-section grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center items-center">
+
+      <div class="content order-1 md:order-1 text-center md:text-left">
+
+        <h2 class="text-3xl md:text-4xl font-medium tracking-wide">Revitalize Your</h2>
+        <h2 class="text-3xl md:text-4xl mt-1 pt-[5px] font-medium tracking-wide">Clothes with Expert</h2>
+        <h2 class="text-3xl md:text-4xl ml-1 pt-[5px] font-medium text-blue-600 tracking-wide">Laundry Services!</h2>
+
+        <p class="mt-4 md:mt-6 text-gray-600 font-medium [word-spacing:0.2rem] max-w-2xl mx-auto md:mx-0">From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and rediscover the freshness of your clothes today!</p>
+        
+        <div class="btn flex justify-center md:justify-start mt-5">
+       
+          <a href="#services" class="">
+          <button class="  px-5 py-4  bg-blue-600 text-white  border-none rounded-[14px] hover:bg-blue-700 duration-300 transition-colors cursor-pointer">
+            <i class="fa-solid fa-calendar-check"></i>  Book a service today!
+          </button>
+          </a>
+
+        </div>
+        
+      </div>
+
+      <div class="hero-image hidden  md:order-2 md:flex justify-end items-center">
+         <img class="h-[500px] w-[500px] object-fill" src="images/washingMachine.png" alt="">
+      </div>
+
+    </div>
+
+    </section>
+
+    <section class="achievements bg-blue-600 max-w-full  px-4 md:px-8 py-6 md:py-8">
+
+      <div class=" flex flex-col md:flex-row flex-wrap justify-center md:justify-around items-center  ">
+
+      <div class="first text-2xl md:text-3xl font-medium pt-2 pb-6 md:pt-4 md:pb-4 ">
+        <h2>Our Achievements</h2>
+      </div>
+
+      <div class="sec flex  justify-center md:justify-between gap-2 md:gap-10">
+
+        <div class=" flex justify-center items-center gap-3">
+        <div class="h-[14vh] w-0.5 bg-gray-500"></div>
+        <div>
+          <h2 class="text-2xl font-medium">15+</h2>
+          <p class="text-[22px]">Laundry Services</p>
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center gap-3">
+        <div class="h-[14vh] w-0.5 bg-gray-500 "></div>
+        <div>
+          <h2 class="text-2xl font-medium">240+</h2>
+          <p class="text-[22px]">Happy Customer's</p>
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center gap-3">
+        <div class="h-[14vh] w-0.5 bg-gray-500"></div>
+        <div>
+          <h2 class="text-2xl font-medium">5+ Years</h2>
+          <p class="text-[22px]">Experience</p>
+        </div>
+      </div>
+
+      </div>
+
+      
+    </div>
+    </section>
+
+    <section class="services bg-gray-300 " id="services">
+
+      <div class="min-h-[90vh] max-w-[1200px] mx-auto px-4 md:px-8 py-16 md:pt-24 grid grid-cols-1 lg:grid-cols-[60%_40%]  gap-5 ">
+       
+        <div class="our-services bg-white p-4 border-none rounded-[14px]">
+
+          <div class="service-title">
+
+            <h2 class="text-3xl font-medium">Our Services</h2>
+            <p class="text-gray-600 font-medium pb-6 pt-1.2">Click on <b>Add Item</b> button to add the services to your cart</p>
+            <hr class="border-b-2 border-gray-300 ">
+
+          </div>
+
+          <div class="service-items ">
+
+
+           <div class="service-item flex justify-between items-center mt-5">
+
+            <div class="service-details ">
+              <span class="text-blue-500 mr-1"><i class="fa-solid fa-shirt"></i></span>
+              <span class="font-semibold">Dry Cleaning - </span>
+              <span class="text-blue-700 font-medium">₹200.00</span>
+            </div>
+
+            <div class="add-btn">
+              <button data-id="1" onclick="addItem(1,'Dry Cleaning', 200)" class="bg-gray-300 add-button flex items-center justify-center gap-2  text-black font-semibold p-3 md:pt-2 md:pb-2 md:pl-6 md:pr-6 border-none rounded-full md:rounded-[14px] cursor-pointer "><span class="btn-text hidden md:inline-block">Add Item</span>  <i class="fa-solid fa-circle-plus"></i></button>
+
+            </div>
+
+           </div> 
+
+           <div class="service-item flex justify-between items-center mt-5">
+
+            <div class="service-details ">
+              <span class="text-amber-900 mr-1"><i class="fa-solid fa-basket-shopping"></i></span>
+              <span class="font-semibold">Wash & Fold - </span>
+              <span class="text-blue-700 font-medium">₹100.00</span>
+            </div>
+
+            <div class="add-btn">
+              <button data-id="2" onclick="addItem(2,'Wash & Fold', 100)" class="bg-gray-300 add-button text-black flex items-center justify-center gap-2 font-semibold p-3 md:pt-2 md:pb-2 md:pl-6 md:pr-6 border-none rounded-full md:rounded-[14px] cursor-pointer"><span class="btn-text hidden md:inline-block">Add Item</span>  <i class="fa-solid fa-circle-plus"></i></button>
+
+            </div>
+
+           </div> 
+
+           <div class="service-item flex justify-between items-center mt-5">
+
+            <div class="service-details">
+              <span class="text-orange-600 mr-1"><i class="fa-solid fa-fire"></i></span>
+              <span class="font-semibold">Ironing - </span>
+              <span class="text-blue-700 font-medium">₹30.00</span>
+            </div>
+
+            <div class="add-btn">
+              <button data-id="3" onclick="addItem(3,'Ironing', 30)" class="bg-gray-300 add-button text-black font-semibold flex items-center justify-center gap-2 p-3 md:pt-3 md:pb-2 md:pl-6 md:pr-6 border-none rounded-full md:rounded-[14px] cursor-pointer"><span class="btn-text hidden md:inline-block">Add Item</span>  <i class="fa-solid fa-circle-plus"></i></button>
+
+            </div>
+
+           </div> 
+
+           <div class="service-item flex justify-between items-center mt-5">
+
+            <div class="service-details">
+              <span class="text-blue-500 mr-1"><i class="fa-solid fa-spray-can-sparkles"></i></span>
+              <span class="font-semibold">Stain Removal - </span>
+              <span class="text-blue-700 font-medium">₹500.00</span>
+            </div>
+
+            <div class="add-btn">
+              <button data-id="4" onclick="addItem(4,'Stain Removal', 500)" class="bg-gray-300 add-button font-semibold flex items-center justify-center gap-2 text-black p-3 md:pt-2 md:pb-2 md:pl-6 md:pr-6 border-none rounded-full md:rounded-[14px] cursor-pointer"><span class="btn-text hidden md:inline-block">Add Item</span>  <i class="fa-solid fa-circle-plus"></i></button>
+
+            </div>
+
+           </div> 
+
+           <div class="service-item flex justify-between items-center mt-5">
+
+            <div class="service-details">
+              <span class="text-red-500 mr-1"><i class="fa-solid fa-soap"></i></span>
+              <span class="font-semibold">Leather & Suede Cleaning - </span>
+              <span class="text-blue-700 font-medium">₹1000.00</span>
+            </div>
+
+            <div class="add-btn">
+              <button data-id="5" onclick="addItem(5,'Leather & Suede Cleaning', 1000)" class="bg-gray-300 add-button font-semibold text-black flex items-center justify-center gap-2 p-3 md:pt-2 md:pb-2 md:pl-6 md:pr-6 border-none rounded-full md:rounded-[14px] cursor-pointer"><span class="btn-text hidden md:inline-block">Add Item</span>  <i class="fa-solid fa-circle-plus"></i></button>
+
+            </div>
+
+           </div> 
+
+           <div class="service-item flex justify-between items-center mt-5">
+
+            <div class="service-details">
+              <span class="text-blue-800 mr-1"><i class="fa-solid fa-gem"></i></span>
+              <span class="font-semibold">Wedding Dress Cleaning - </span>
+              <span class="text-blue-700 font-medium">₹2800.00</span>
+            </div>
+
+            <div class="add-btn">
+              <button data-id="6" onclick="addItem(6,'Wedding Dress Cleaning', 2800)" class="bg-gray-300 add-button text-black flex items-center justify-center gap-2 font-semibold p-3 md:pt-2 md:pb-2 md:pl-6 md:pr-6 border-none rounded-full md:rounded-[14px] cursor-pointer"><span class="btn-text hidden md:inline-block">Add Item</span>  <i class="fa-solid fa-circle-plus"></i></button>
+
+            </div>
+
+           </div> 
+
+
+           <div class="service-item flex justify-between items-center mt-5">
+
+            <div class="service-details">
+              <span class="text-amber-700 mr-1"><i class="fa-solid fa-rug"></i></span>
+              <span class="font-semibold">Curttain & Drapery Cleaning - </span>
+              <span class="text-blue-700 font-medium">₹1500.00</span>
+            </div>
+
+            <div class="add-btn">
+              <button data-id="7" onclick="addItem(7,'Curttain & Drapery Cleaning', 1500)" class="add-button bg-gray-300 flex items-center justify-center gap-2 text-black font-semibold p-3 md:pt-2 md:pb-2 md:pl-6 md:pr-6 border-none rounded-full md:rounded-[14px] cursor-pointer"><span class="btn-text hidden md:inline-block">Add Item</span>  <i class="fa-solid fa-circle-plus"></i></button>
+
+            </div>
+
+           </div>
+
+
+           <div class="service-item flex justify-between items-center mt-5">
+
+            <div class="service-details">
+              <span class="text-blue-500 mr-1"><i class="fa-solid fa-layer-group"></i></span>
+              <span class="font-semibold">Blanket Cleaning - </span>
+              <span class="text-blue-700 font-medium">₹500.00</span>
+            </div>
+
+            <div class="add-btn">
+              <button data-id="8"  onclick="addItem(8,'Blanket Cleaning', 1500)" class="add-button bg-gray-300 text-black flex items-center justify-center gap-2 font-semibold p-3 md:pt-2 md:pb-2 md:pl-6 md:pr-6 border-none rounded-full md:rounded-[14px] cursor-pointer"><span class="btn-text hidden md:inline-block">Add Item</span>  <i class="fa-solid fa-circle-plus"></i></button>
+
+            </div>
+
+           </div>
+
+          </div>
+
+
+          <hr class="border-b-2 border-gray-300 mt-5 ">
+
+          <div class="info">
+            
+            <p class="pt-6 pb-2 text-green-800 font-medium "><span class="text-green-800 text-sm mr-2"><i class="fa-solid fa-circle-info"></i></span>Add the items to the cart and Book Now !</p>
+          </div>
+        </div>
+
+        <div class="view-book grid grid-rows-2 gap-5 lg:pr-10 h-full w-full">
+
+          <div id="addedContainer" class="view bg-white  rounded-[14px] p-4 flex flex-col h-auto min-h-[250px] relative">
+
+           <div class="view-title flex justify-center items-center pb-1">
+            <h3 class="text-3xl font-medium">Added Items</h3>
+            
+           </div>
+
+           
+
+           <div id="itemsWrapper" class="selected-items overflow-hidden   rounded-lg  pt-2 ">
+
+            <table class="w-full text-sm bg-gray-100 pb-2 border-collapse rounded-[10px]">
+              <thead class="border-b-2 border-gray-300 ">
+                <tr>
+                  <th class="text-left pt-2 pr-2 pb-2 pl-3">S.No</th>
+                  <th class="text-left pt-2 pr-1 pb-2 pl-10">Service Name</th>
+                  <th class="text-center pt-2 pr-2 pb-2 pl-3">Price</th>
+                </tr>
+              </thead>
+
+             
+            </table>
+
+            <div id="scrollableDiv" class="h-0 bg-gray-100 custom-scroll scrollbar-stable">
+              <table class="w-full text-sm border-collapse rounded-[10px] mb-2">
+                
+               <tbody id="addedItems" class="pt-9">
+                <!-- <tr>
+                <td colspan="3" class="text-center p-3 text-gray-500">No items added yet</td>
+                  
+                </tr> -->
+              </tbody>
+              </table>
+            </div>
+
+            <div id="emptyMessage" class=" gap-0.5  p-3 mt-4">
+
+                  <div class="flex items-center justify-center " >
+                    <i class="fa-solid fa-circle-exclamation text-black text-4xl"></i>
+                  </div>
+                  <div class="flex items-center justify-center font-semibold">
+                    <span>No items added yet!</span>
+                  </div>
+                  <div class="flex items-center justify-center text-gray-600 font-semibold">
+                    <p>Add items to the cart from service bar</p>
+                  </div>
+                  
+                 </div>
+
+           </div>
+
+           <div class="absolute  bottom-2 bg-white  mb-2 border-t py-2  text-lg font-semibold gap-2 w-[95%] flex justify-between items-center  ">
+             <span class="pl-2 pt-1 font-semibold text-2xl">Total Amount:</span> <span class="pr-10 pt-1 font-semibold text-2xl" id="totalAmount">₹0</span>
+           </div>
+
+          </div>
+
+          <div class="book bg-white border-none rounded-[14px] p-4">
+
+           <div class="book-title flex justify-center items-center ">
+            <h3 class="text-3xl font-medium">Book Now</h3>
+           </div>
+
+           <div class="form-section mt-1 h-full overflow-y-auto">
+
+            <form action="#" class="space-y-4 ">
+
+              <div class="fname">
+              <label for="fullname" class=" text-[1.1rem] font-semibold pl-1.5">Full Name</label>
+              <input id="fullName" type="text" id="name" class=" border-2 border-gray-500 rounded-2xl p-2 pl-3 w-full mt-1.5" placeholder="Your Name"> 
+              </div>
+
+              <div class="contact-details grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-3">
+              
+              <div class="email">
+                <label for="emailField" class=" text-[1.1rem] font-semibold pl-1.5">Email</label>
+                <input id="emailField" type="email" id="email" placeholder="email@gmail.com" class=" border-2 border-gray-500 rounded-2xl p-2 pl-3 w-full mt-1.5" > 
+              </div>
+
+              <div class="phone">
+                <label for="phoneField" class=" text-[1.1rem] font-semibold pl-1.5">Phone Number</label>
+                <input id="phoneField" type="tel" id="phone" placeholder="0000000000" class=" border-2 border-gray-500 rounded-2xl p-2 pl-3 w-full mt-1.5"> 
+              </div>
+
+              </div>
+
+              <div id="bookBtn" class="book-btn mt-0.5 md:mt-2  flex justify-center items-center">
+                <button id="book-btn" type="submit" class="p-2 pt-2 font-semibold bg-gray-400 rounded-[10px] w-full cursor-not-allowed"> Book Now</button>
+              </div>
+
+              <div flex justify-center items-center >
+                <p id="infoMessage" class="text-center font-semibold  mt-1.5  opacity-0 transition-all duration-500"></p>
+                </p>
+              </div>
+            
+            </form>
+
+           </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section class="quick-desc max-w-full  px-4 md:px-8 py-8" id="about-us">
+       
+      <div class="grid grid-cols-1 sm:grid-cols-2  justify-items-center items-center md:flex md:justify-between md:items-center gap-6 md:gap-10">
+
+      <div class="first p-2 gap-1 text-center">
+        <div class="flex justify-center items-center">
+          <img src="Images/washing_machine.png" alt="washing_machine" class="h-[100px] w-[200px]">
+        </div>
+        <h2 class="text-2xl font-bold">Premium Services</h2>
+        <p class="text-gray-600 text-center  text-[14px] font-medium [word-spacing:0.2rem] pt-1">Elevate your wardrobe with our meticulous dry cleaning, ensuring garments look and feel as good as new.</p>
+      </div>
+
+      <div class="second p-2 gap-1 text-center">
+        <div class="flex justify-center items-center">
+          <img src="Images/customer_support.png" alt="quick_support" class="h-[100px] w-[200px]">
+        </div>
+        <h2 class="text-2xl font-bold">Quick Support</h2>
+        <p class="text-gray-600 text-center  text-[14px] font-medium [word-spacing:0.2rem] pt-1">We're committed to providing prompt solution to ensure your experience is smooth and worry-free.</p>
+      </div>
+
+      <div class="third p-2 gap-1  text-center">
+        <div class="flex justify-center items-center">
+           <img src="Images/fast_delivery.png" alt="delivery" class="h-[100px] w-[200px]">
+        </div>
+        <h2 class="text-2xl font-bold">Hassle Free Delivery</h2>
+        <p class="text-gray-600 text-center  text-[14px] font-medium [word-spacing:0.2rem] pt-1">Enjoy seamless services with our convenient pickup and delivery option, talloned to your schedule.</p>
+      </div>
+
+      <div class="fourth p-2 gap-1 text-center">
+        <div class="flex justify-center items-center">
+          <img src="Images/affordable_price.png" alt="affordable_price" class="h-[100px] w-[200px]">
+        </div>
+        <h2 class="text-2xl font-bold">Affordable Price</h2>
+        <p class="text-gray-600 text-center  text-[14px] font-medium [word-spacing:0.2rem] pt-1">Experience exceptional care without breaking the bank - our affordable prices make laundry day stress-free.</p>
+      </div>
+    </div>
+
+    </section>
+
+    <section id="contact-us" class="bg-blue-600 w-full px-4 md:px-8 py-8  overflow-x-hidden">
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center max-w-6xl mx-auto">
+
+    
+    <div class="text-center md:text-left">
+      <h2 class="text-3xl font-medium text-white">Subscribe to our Newsletter</h2>
+      <p class="text-white font-medium pt-2">Stay updated with the latest news and exclusive offers!</p>
+    </div>
+
+    <!-- Form -->
+    <div class="w-full flex flex-col items-center md:items-start gap-3">
+
+      <div class="flex flex-col sm:flex-row w-full justify-center md:justify-end gap-3">
+        <input type="text"  placeholder="Enter your name" class="p-3 w-full sm:w-1/2 bg-blue-500 text-white font-medium rounded shadow-lg focus:outline-none">
+
+        <input  type="email"  placeholder="Enter your email" class="p-3 w-full sm:w-1/2 bg-blue-500 text-white font-medium rounded shadow-lg focus:outline-none">
+      </div>
+
+      <button  class="bg-white text-blue-600 p-3 w-full sm:w-1/2 font-semibold rounded shadow-lg hover:bg-gray-100 transition cursor-pointer"> Subscribe </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+    <footer>
+
+      <div class="footer-section  bg-gray-300 max-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-10 pl-10 pr-10 pb-6 sm:justify-items-start sm:items-start md:justify-items-center md:items-start ">
+
+        <div class="logo-about">
+
+          <div class="logo">
+            <p class="text-3xl font-bold">LOGO</p>
+          </div>  
+
+          <div class="about-us mt-6">
+            <h2 class="text-2xl font-medium pb-3">About Us</h2>
+            <p class="text-gray-800 font-medium [word-spacing:0.2rem] text-justify ">We are dedicated to providing top-notch laundry services with a focus on quality, convenience, and customer satisfaction. Experience the difference with us!</p>
+          </div>
+
+        </div>
+
+        <div class="quick-links ">
+          <h2 class="text-2xl font-medium pb-2">Quick Links</h2>
+          <ul class="text-gray-800 font-medium space-y-2">
+            <li><a href="#"  class="hover:text-blue-600 transition-colors duration-300">Home</a></li>
+            <li><a href="#" class="hover:text-blue-600 transition-colors duration-300">About Us</a></li>
+            <li><a href="#" class="hover:text-blue-600 transition-colors duration-300">Contact Us</a></li>
+            <li><a href="#" class="hover:text-blue-600 transition-colors duration-300">Services</a></li>
+            <li><a href="#" class="hover:text-blue-600 transition-colors duration-300">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-blue-600 transition-colors duration-300">Terms & Condition</a></li>
+          </ul>
+        </div>
+
+        <div class="contact-us">
+          <h2 class="text-2xl font-medium pb-2">Contact Us</h2>
+          <p class="text-gray-800 font-medium"><span class="font-bold">Email: </span>laundryservices090@gamil.com</p>
+          <p class="text-gray-800 font-medium pt-2"><span class="font-bold">Phone: </span>+91 9876543210</p>
+          <p class="text-gray-800 font-medium pt-2"><span class="font-bold">Address: </span>123 Laundry St, Clean City, India</p>
+        </div>
+
+        <div class="follow-us sm:mb-3">
+          <h2 class="text-2xl font-medium pb-2">Follow Us</h2>
+          <div class="social-icons flex space-x-5">
+            <a href="#" class="text-gray-800 hover:text-blue-800 transition-colors duration-300 text-3xl"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-800 hover:text-blue-500 transition-colors duration-300 text-3xl"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-gray-800 hover:text-[#9c4270] transition-colors duration-300 text-3xl"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-gray-800 hover:text-red-600 transition-colors duration-300 text-3xl"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bottom-footer bg-gray-300 h-[8vh] flex justify-center items-center border-t-2 border-gray-400 pt-2 pb-2">
+        <p class="text-gray-800  font-medium">&copy; 2025 Laundry Services. All rights reserved.</p>
+      </div>
+    </footer>
+      
+
+
+    <!-- js -->
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+      (function(){
+        emailjs.init({
+          publicKey: "LEXen-fyfwYtTeKEJ",
+        });
+      })();
+    </script>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
