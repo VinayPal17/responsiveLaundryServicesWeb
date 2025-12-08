@@ -212,14 +212,17 @@ document.getElementById("book-btn").addEventListener("click", function (e) {
             document.getElementById("phoneField").value = "";
 
              document.querySelectorAll(".add-button").forEach(btn => {
-                btn.innerHTML = `Add Item <i class="fa-solid fa-circle-plus"></i>`;
-                btn.classList.remove("bg-red-100");
-                btn.classList.remove("text-red-500");
-                btn.classList.add("bg-gray-300");
-                btn.classList.remove("pr-3");
-                btn.classList.remove("pl-3");
-                btn.classList.add("pl-6");
-                btn.classList.add("pr-6");
+                btn.innerHTML = `<span class="btn-text hidden md:inline-block">Add Item</span> <i class="fa-solid fa-circle-plus"></i>`;
+                // btn.classList.remove("bg-red-100");
+                // btn.classList.remove("text-red-500");
+                // btn.classList.add("bg-gray-300");
+                // btn.classList.remove("pr-3");
+                // btn.classList.remove("pl-3");
+                // btn.classList.add("pl-6");
+                // btn.classList.add("pr-6");
+
+                btn.className =
+  "add-button text-black font-semibold flex items-center justify-center gap-2 rounded-full md:rounded-[14px] p-3 md:pt-2 md:pb-2 md:pl-6 md:pr-6 bg-gray-300";
             });
 
             updateCartUI();
