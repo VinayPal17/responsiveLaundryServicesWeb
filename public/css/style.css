@@ -1100,6 +1100,26 @@
       gap: calc(var(--spacing) * 3.5);
     }
   }
+  .max-sm\:text-\[\#9c4270\] {
+    @media (width < 40rem) {
+      color: #9c4270;
+    }
+  }
+  .max-sm\:text-blue-500 {
+    @media (width < 40rem) {
+      color: var(--color-blue-500);
+    }
+  }
+  .max-sm\:text-blue-800 {
+    @media (width < 40rem) {
+      color: var(--color-blue-800);
+    }
+  }
+  .max-sm\:text-red-600 {
+    @media (width < 40rem) {
+      color: var(--color-red-600);
+    }
+  }
   .sm\:mb-0 {
     @media (width >= 40rem) {
       margin-bottom: calc(var(--spacing) * 0);
