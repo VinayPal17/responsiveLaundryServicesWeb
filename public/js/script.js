@@ -111,7 +111,7 @@ function updateCartUI() {
             tableBody.innerHTML += `
                 <tr class="border-b border-gray-300">
                     <td class="font-medium text-left pt-2 pr-2 pb-2 pl-3">${index + 1}</td>
-                    <td class="font-medium text-center pt-2 pr-2 pb-2 pl-3.8">${item.name}</td>
+                    <td class="font-medium text-center pt-2 pr-2 pb-2 sm:pl-0 md:pl-1">${item.name}</td>
                     <td class="font-medium text-right pt-2 pr-6 pb-2 ">₹${item.price}</td>
                 </tr>
             `;

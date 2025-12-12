@@ -1130,6 +1130,11 @@
       margin-bottom: calc(var(--spacing) * 3);
     }
   }
+  .sm\:pl-0 {
+    @media (width >= 40rem) {
+      padding-left: calc(var(--spacing) * 0);
+    }
+  }
   .sm\:inline-block {
     @media (width >= 40rem) {
       display: inline-block;
@@ -1178,6 +1183,11 @@
   .sm\:pr-2 {
     @media (width >= 40rem) {
       padding-right: calc(var(--spacing) * 2);
+    }
+  }
+  .sm\:pl-1 {
+    @media (width >= 40rem) {
+      padding-left: calc(var(--spacing) * 1);
     }
   }
   .md\:bottom-2 {
