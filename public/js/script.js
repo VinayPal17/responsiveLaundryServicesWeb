@@ -8,7 +8,7 @@
 
       menuToggle.addEventListener('click', () => {
         const isOpen = !mobileMenu.classList.contains('hidden');
-        //To hide menu on click
+        
         if (isOpen) {
           mobileMenu.classList.add('hidden');
           menuIcon.classList.remove('fa-xmark');
@@ -23,7 +23,7 @@
         }
       });
 
-      // Close mobile menu when a link is clicked
+      
       mobileMenu.querySelectorAll('a').forEach(a => {
         a.addEventListener('click', () => {
           mobileMenu.classList.add('hidden');
@@ -42,52 +42,38 @@
 let cartItems = [];
 let totalAmount = 0;
 
-// Add item to cart
+
 function addItem(serviceId, name, price) {
     const index = cartItems.findIndex(item => item.id === serviceId);
     const button = document.querySelector(`button[data-id="${serviceId}"]`);
 
     if (index === -1) {
-        // ADD ITEM
+        
         cartItems.push({ id: serviceId, name, price });
         totalAmount += price;
 
-        // Change button to REMOVE
+        
         button.innerHTML = `<span class="btn-text hidden md:inline-block">Remove Item</span> <i class="fa-solid fa-circle-minus"></i>`;
-        // button.classList.remove("pr-6");
-        // button.classList.remove("pl-6");
-        // button.classList.add("pl-3");
-        // button.classList.add("pr-3");
-        // button.classList.remove("bg-gray-300");
-        // button.classList.add("bg-red-100");
-        // button.classList.add("text-red-500");
-        button.className =
-  "add-button text-black font-semibold flex items-center justify-center gap-2 rounded-full md:rounded-[14px] p-3 md:pt-2 md:pb-2 md:pl-3 md:pr-3 bg-red-100 text-red-500";
+        
+        button.className ="add-button text-black font-semibold flex items-center justify-center gap-2 rounded-full md:rounded-[14px] p-3 md:pt-2 md:pb-2 md:pl-3 md:pr-3 bg-red-100 text-red-500";
     } 
     else {
-        // REMOVE ITEM
+        
         totalAmount -= cartItems[index].price;
         cartItems.splice(index, 1);
 
-        // Change button back to ADD
+        
         button.innerHTML = `<span class="btn-text hidden md:inline-block">Add Item</span> <i class="fa-solid fa-circle-plus"></i>`;
-        // button.classList.remove("pr-3");
-        // button.classList.remove("pl-3");
-        // button.classList.add("pl-6");
-        // button.classList.add("pr-6");
-        // button.classList.remove("bg-red-100");
-        // button.classList.remove("text-red-500");
-        // button.classList.add("bg-gray-300");
+        
 
-        button.className =
-  "add-button text-black font-semibold flex items-center justify-center gap-2 rounded-full md:rounded-[14px] p-3 md:pt-2 md:pb-2 md:pl-6 md:pr-6 bg-gray-300";
+        button.className ="add-button text-black font-semibold flex items-center justify-center gap-2 rounded-full md:rounded-[14px] p-3 md:pt-2 md:pb-2 md:pl-6 md:pr-6 bg-gray-300";
     }
 
     updateCartUI();
     updateBookNowButton();
 }
 
-// Update the right-side cart UI
+
 function updateCartUI() {
     const tableBody = document.getElementById("addedItems");
     const totalElement = document.getElementById("totalAmount");
@@ -121,7 +107,7 @@ function updateCartUI() {
     totalElement.textContent = "₹" + totalAmount;
 }
 
-//Update Book Now Button    
+  
 
 function updateBookNowButton() {
     const btn = document.getElementById("book-btn");
@@ -135,35 +121,43 @@ function updateBookNowButton() {
     }
 }
 
-//Message Button
+
 
 function showMessage(text, type = "success") {
     const msg = document.getElementById("infoMessage");
 
      msg.textContent = text;    
 
-    // base reset
+    
     msg.className = "text-center mt-1.5 font-semibold  opacity-0 transition-all duration-500";
 
-    // colors
-    if (type === "success") msg.classList.add("text-green-800");
-    if (type === "error") msg.classList.add("text-red-800");
-    if (type === "warning") msg.classList.add("text-yellow-800");
+    
+    if (type === "success") {
+        msg.classList.add("text-green-800");
+    }
 
-    // fade in
+    if (type === "error") {
+        msg.classList.add("text-red-800");
+    }
+    
+    if (type === "warning") {
+        msg.classList.add("text-yellow-800");
+    }
+
+    
     setTimeout(() => {
         msg.classList.remove("opacity-0");
         msg.classList.add("opacity-100");
     }, 10);
 
-    // fade out after 3s
+    
     setTimeout(() => {
         msg.classList.remove("opacity-100");
         msg.classList.add("opacity-0");
     }, 3000);
 }
 
-// Booking Form Submit
+
 document.getElementById("book-btn").addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -200,7 +194,7 @@ document.getElementById("book-btn").addEventListener("click", function (e) {
 
             showMessage("Booking successful! ✔", "success");
             
-            // Reset everything
+            
             cartItems = [];
             totalAmount = 0;
 
@@ -210,13 +204,7 @@ document.getElementById("book-btn").addEventListener("click", function (e) {
 
              document.querySelectorAll(".add-button").forEach(btn => {
                 btn.innerHTML = `<span class="btn-text hidden md:inline-block">Add Item</span> <i class="fa-solid fa-circle-plus"></i>`;
-                // btn.classList.remove("bg-red-100");
-                // btn.classList.remove("text-red-500");
-                // btn.classList.add("bg-gray-300");
-                // btn.classList.remove("pr-3");
-                // btn.classList.remove("pl-3");
-                // btn.classList.add("pl-6");
-                // btn.classList.add("pr-6");
+                
 
                 btn.className ="add-button text-black font-semibold flex items-center justify-center gap-2 rounded-full md:rounded-[14px] p-3 md:pt-2 md:pb-2 md:pl-6 md:pr-6 bg-gray-300";
             });
